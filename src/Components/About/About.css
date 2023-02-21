@@ -1,0 +1,57 @@
+
+#skills {
+  margin: 50px auto;
+
+}
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+}
+.skills {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  padding: 15px;
+  border: solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+}
+.icon {
+  font-size: 50px;
+}
+.skills:hover {
+  width: 110px;
+  height: 110px;
+}
+@media only screen and (min-width: 768px) {
+  #grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.Tooltip {
+  color: white;
+  font-weight: bold;
+  width: 100px;
+
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.rc-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+}

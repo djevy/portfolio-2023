@@ -1,0 +1,146 @@
+#projects .card {
+  position: relative;
+  margin:25px;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  max-width: 450px;
+  border: #000 solid 1px;
+  border-radius: 10px;
+  height: 150px;
+  max-width: 200px;
+  width: 95%;
+  overflow: hidden;
+  transition: height 1s ease;
+  -webkit-transition: height 1s ease;
+  transition: 1.5s;
+}
+
+#projects .card:hover {
+  box-shadow: 0 4px 5px 3px rgba(252, 252, 252, 0.692) !important;
+  height: 350px;
+  max-width: 300px;
+}
+#projects .expand {
+  height: 350px;
+  max-width: 300px;
+}
+
+#projects .expandContents {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  cursor: pointer;
+}
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+#projects .expandContents .unrotate {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+}
+#projects .expandContents .rotate {
+  display: inline-block;
+  transition: transform 1s ease;
+  transform: rotate(180deg);
+}
+
+#projects-grid {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#projects .card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-height: 120px;
+  min-height: 100px;
+  color: #000;
+}
+#projects .card a img {
+  height: 100px;
+  margin: auto;
+}
+#projects .card .project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+#projects .card a h3 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#projects .card .project-description p {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #projects #projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  #projects .card:hover {
+    height: 350px;
+    max-width: 400px;
+  }
+  #projects .expand {
+    height: 350px;
+    max-width: 400px;
+  }
+  #projects .card .project-description {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  /* #Gazetteer {
+    grid-column: 1;
+  }
+  #CompanyDirectory {
+    grid-column: 2;
+  } */
+}
+@media only screen and (max-width: 376px) {
+  #projects .card:hover {
+    height: 400px;
+    max-width: 300px;
+  }
+  #projects .expand {
+    height: 400px;
+    max-width: 300px;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(224, 18, 18, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(224, 18, 18, 0.4);
+    box-shadow: 0 0 0 0 rgba(224, 18, 18, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
