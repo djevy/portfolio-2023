@@ -1,6 +1,6 @@
 #AppLayout {
     color: #fff;
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     max-width: 1024px;
 }
@@ -12,3 +12,9 @@
 #AppLayout section h2{
     cursor: pointer;
 }
+
+@media only screen and (min-width: 768px) {
+    #AppLayout {
+        width: 80%;
+    }
+  }

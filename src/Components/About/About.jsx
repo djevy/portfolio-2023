@@ -1,6 +1,9 @@
 import "./About.css";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import newsArticle from "../../Images/Darren-KentLive-front-page.png";
+import expandIcon from "../../Images/arrow-thin-top-right-corner-icon.png";
+
 // import {
 //   FaHtml5,
 //   FaReact,
@@ -22,35 +25,70 @@ export const About = () => {
     setIsHidden(!isHidden);
   };
 
+  const [expand, setExpand] = useState({});
+  const toggleExpand = (index) => {
+    setExpand((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
   return (
     <section id="about" ref={ref} className={inView ? "show" : "hidden"}>
       <div id="aboutMe">
-        <h2 onClick={toggleParagraphs}>About me <span className={isHidden ? "rotate" : "unrotate"}>▼</span></h2>
+        <h2 onClick={toggleParagraphs}>
+          About me <span className={isHidden ? "rotate" : "unrotate"}>▼</span>
+        </h2>
         <div className={`fade-out ${isHidden ? "hidden" : "show"}`}>
           <p className="showContent">
             After spending two years living in Japan, and studying the language
             and culture working as an English teacher. I am now focusing my
-            passion for language, on the universal language of code. My goal is to
-            become a Full-stack Developer with a wide range of skills.
+            passion for language, on the universal language of code. My goal is
+            to become a Full-stack Developer with a wide range of skills.
           </p>
           <p className="showContent">
-            My current tech-stack is focused on the React environment as I find component based code to be the most fun to work with.
-            I also have great knowledge of HTML, CSS and
-            JavaScript. I love creating beautifully clean and impactful websites and projects.
+            My current tech-stack is focused on the React environment as I find
+            component based code to be the most fun to work with. I also have
+            great knowledge of HTML, CSS and JavaScript. I love creating
+            beautifully clean and impactful websites and projects.
           </p>
           <p className="showContent">
-            I am open to individual freelance work, but also enjoying working in a team environment.
-            After all, two heads are better than one!
+            I am open to individual freelance work, but also enjoying working in
+            a team environment. After all, two heads are better than one!
           </p>
           <p className="showContent">
-            Working closely with clients is my top priority as to ensure each and
-            every need is met, so I can create them the website of their dreams.
+            Working closely with clients is my top priority as to ensure each
+            and every need is met, so I can create them the website of their
+            dreams.
           </p>
           <p className="showContent">
             I am always looking for an exciting new project to work on... so why
             wait? I look forward to working with you!
           </p>
+          <div>
+          <p>
+            Here is a parting gift created by my former colleagues at Reach plc:
+          </p>
+          <div id="newsArticleHolder">
+            <img
+              className={`expandContents ${
+                expand[0] ? "rotate" : "unrotate pulse"
+              }`}
+              src={expandIcon}
+              alt="Expand contents"
+              onClick={() => toggleExpand(0)}
+            />
+            <img
+              id="newsArticle"
+              className={`${expand[0] ? "expand" : ""}`}
+              src={newsArticle}
+              alt="A fake news article created by my former colleagues at Reach."
+            />
+          </div>
         </div>
+        </div>
+
+
       </div>
 
       {/* <div id="skills">
