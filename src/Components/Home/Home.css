@@ -10,6 +10,9 @@
   display: flex;
   margin: auto;
 }
+.light-mode #profileContainer {
+  border: #000 solid 3px;
+}
 
 #home a {
   color: #fff;
