@@ -9,6 +9,10 @@
   z-index: 2;
   color: #fff;
 }
+.light-mode #footer {
+  background-color: rgb(212, 212, 212);
+  color: #000;
+}
 
 #footer h3 {
   font-size: 16px;

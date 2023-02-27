@@ -15,6 +15,9 @@
   transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
+.light-mode #CVDownload {
+  border: solid #000;
+}
 
 #CVDownload:hover {
   font-weight: bold;

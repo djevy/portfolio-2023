@@ -67,11 +67,11 @@ export const Projects = () => {
                 <img alt="Website Header" src={costOfLiving} />
                 <h3>Cost of Living Calculator</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[3] ? "" : "hideDescription"}`}>
                 <p>
                   One of my most successful widgets, used on the Mirror Online
                   to help users calculate the increase to their energy bills due
-                  to the cost of living crisis in the UK.{" "}
+                  to the cost of living crisis in the UK.
                   <a
                     className="articleLink"
                     target="_blank"
@@ -100,7 +100,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={pensionAgeCalculator} />
                 <h3>Pension Age Calculator</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[4] ? "" : "hideDescription"}`}>
                 <p>
                   A pension age calculator widget used to show the date at which
                   you are able to claim your state pension, as well as showing
@@ -127,7 +127,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={newYearsResolutions} />
                 <h3>New Years Resolutions Map</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[5] ? "" : "hideDescription"}`}>
                 <p>
                   A widget requested by Liverpool based newspaper, the Echo, to
                   celebrate the New Years resolutions of the people living in
@@ -161,7 +161,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={happiestArea} />
                 <h3>Happiest Areas</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[6] ? "" : "hideDescription"}`}>
                 <p>
                   A game widget based on whether one town or city is more or
                   less happy than the starting area that you choose. Give it a
@@ -188,7 +188,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={pickYourSquad} />
                 <h3>World Cup Squad Selector England</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[7] ? "" : "hideDescription"}`}>
                 <p>
                   A football squad selector widget built for the 2022 World Cup.
                   <a
@@ -220,7 +220,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={heatRisk} />
                 <h3>Heat Risk Map</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[8] ? "" : "hideDescription"}`}>
                 <p>
                   This widget was created to show which areas are the most
                   vulnerable to extreme heat in the UK.
@@ -246,7 +246,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={takeAway} />
                 <h3>Takeaway Ranking</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[9] ? "" : "hideDescription"}`}>
                 <p>
                   A widget used to compare the number of takeaway shops and
                   stands between different areas in the UK.
@@ -271,7 +271,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={crimeOutcomes} />
                 <h3>Crime Outcomes</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[10] ? "" : "hideDescription"}`}>
                 <p>
                   This widget allows the user to see how different crimes in
                   their area have been dealt with in comparison to other areas
@@ -298,7 +298,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={coffeeShops} />
                 <h3>Coffee Shop Capitals</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[11] ? "" : "hideDescription"}`}>
                 <p>
                   This widget was created so you can compare how many different
                   types of coffee chains you have in your area in comparison
@@ -324,7 +324,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={dangerousPlaces} />
                 <h3>Dangerous Places</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[12] ? "" : "hideDescription"}`}>
                 <p>
                   A widget that allows users to see how safe their neighbourhood
                   is in terms a different crimes in comparison to other areas in
@@ -351,7 +351,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={nationalInsurance} />
                 <h3>National Insurance Calculator</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[13] ? "" : "hideDescription"}`}>
                 <p>
                   This widget was created to help the user understand how recent
                   changes to National Insurance may be affecting how much they
@@ -385,7 +385,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={burglaries} />
                 <h3>Burglaries</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[14] ? "" : "hideDescription"}`}>
                 <p>
                   This widget gives the user the ability to check home many
                   burglaries have occurred in their neighbourhood in the pasted
@@ -412,7 +412,7 @@ export const Projects = () => {
                 <img alt="Website Header" src={electricityBill} />
                 <h3>Electricity Bill Add Up</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[15] ? "" : "hideDescription"}`}>
                 <p>
                   A widget to help users workout which of their appliances cost
                   the most to run based on their kW usage. Based on electricity
@@ -443,7 +443,7 @@ export const Projects = () => {
                 />
                 <h3>Crime Mapper</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[2] ? "" : "hideDescription"}`}>
                 <p>
                   Crime mapper is a leaflet based map utilising a police api,
                   created to show crime rates in towns and cities across the UK
@@ -474,7 +474,7 @@ export const Projects = () => {
                 />
                 <h3>Gazetteer</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[0] ? "" : "hideDescription"}`}>
                 <p>
                   Gazetteer is a mobile first app that provides live country
                   information, weather and exchange rates. It uses technology
@@ -506,7 +506,7 @@ export const Projects = () => {
                 />
                 <h3>Company Directory</h3>
               </a>
-              <div className="project-description">
+              <div className={`project-description ${expand[1] ? "" : "hideDescription"}`}>
                 <p>
                   Company directory is a database interface with CRUD
                   operations. It is a desktop website that can also run on a

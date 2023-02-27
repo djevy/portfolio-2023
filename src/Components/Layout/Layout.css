@@ -1,8 +1,21 @@
+
+
+.App {
+  background: #000;
+}
+.App .light-mode {
+  background: #fff;
+}
 #AppLayout {
     color: #fff;
+    background-color: #000;
     width: 90%;
     margin: 10px auto;
     max-width: 1024px;
+}
+.light-mode #AppLayout {
+    color: #000;
+    background-color: #fff;
 }
 #AppLayout section {
     margin: 40px auto;

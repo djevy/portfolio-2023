@@ -1,6 +1,6 @@
-#home {
+/* #home {
   color: #fff;
-}
+} */
 
 #profileContainer {
   border-radius: 100%;
@@ -11,12 +11,19 @@
   margin: auto;
 }
 
+#home a {
+  color: #fff;
+}
+.light-mode #home a {
+  color: #000;
+}
+
 #home #profileContainer #profilePic {
   width: 50%;
   margin: auto;
 }
 
-home div div:nth-child(1) {
+#home div div:nth-child(1) {
   transition-delay: 200ms;
 }
 #home div div:nth-child(2) {

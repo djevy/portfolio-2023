@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { DarkModeContext } from "../DarkMode/DarkModeProvider";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 // import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
-import Hamburger from "../../Images/hamburger-menu.png"
-import Cross from "../../Images/cross-menu.png"
+import Hamburger from "../../Images/hamburger-menu.png";
+import HamburgerWhite from "../../Images/hamburger-menu-white.png";
+import Cross from "../../Images/cross-menu.png";
+import CrossWhite from "../../Images/cross-menu-white.png";
+import DarkIcon from "../../Images/dark-mode-toggle-icon.png";
+import LightIcon from "../../Images/light-mode-toggle-icon.png";
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -15,16 +20,15 @@ export const Navbar = () => {
     setNavbarOpen(false);
   };
 
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const handleDarkToggle = () => {
+    toggleDarkMode();
+  };
+
   return (
-    <section id="navbar">
+    <section id="navbar" className={darkMode ? "light-mode" : ""}>
       <div id="mobile">
-        <nav
-          className="navBar"
-          // style={{
-          //   backgroundColor:
-          //     scrollState === "top" ? "black" : "rgb(19, 19, 19)",
-          // }}
-        >
+        <nav className="navBar">
           <div id="logo">
             <Link to="/" className="Link">
               <h1>DE</h1>
@@ -32,9 +36,9 @@ export const Navbar = () => {
           </div>
           <button onClick={handleToggle}>
             {navbarOpen ? (
-              <img id="closeBtn" src={Cross} alt="Close menu"/>
+              <img id="closeBtn" src={darkMode ? Cross : CrossWhite} alt="Close menu" />
             ) : (
-              <img id="menuBtn" src={Hamburger} alt="Open menu"/>
+              <img id="menuBtn" src={darkMode ? Hamburger : HamburgerWhite} alt="Open menu" />
             )}
           </button>
           <div className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
@@ -73,6 +77,12 @@ export const Navbar = () => {
             >
               Contact
             </HashLink>
+            <img
+            className="DarkToggle"
+            src={darkMode ? LightIcon : DarkIcon}
+            alt="Dark mode toggle"
+            onClick={handleDarkToggle}
+          />
           </div>
         </nav>
       </div>
@@ -98,6 +108,12 @@ export const Navbar = () => {
           <HashLink smooth to="#contact" className="Link">
             Contact
           </HashLink>
+          <img
+            className="DarkToggle"
+            src={darkMode ? LightIcon : DarkIcon}
+            alt="Dark mode toggle"
+            onClick={handleDarkToggle}
+          />
         </div>
       </div>
     </section>
