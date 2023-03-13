@@ -32,7 +32,7 @@ export const Projects = () => {
     setIsHidden(!isHidden);
   };
 
-  const [expand, setExpand] = useState({ 3: true });
+  const [expand, setExpand] = useState({});
   const toggleExpand = (index) => {
     setExpand((prevState) => ({
       ...prevState,
