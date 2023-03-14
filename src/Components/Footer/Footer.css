@@ -5,13 +5,13 @@
   max-width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgb(19, 19, 19);
   z-index: 2;
-  color: #fff;
+  background-color: var(--dark-navbar);
+  color: var(--dark-menu);
 }
 .light-mode #footer {
-  background-color: rgb(212, 212, 212);
-  color: #000;
+  background-color: var(--light-navbar);
+  color: var(--light-menu);
 }
 
 #footer h3 {

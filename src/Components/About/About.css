@@ -1,7 +1,7 @@
 #newsArticleHolder {
-display: flex;
-flex-direction: column;
-position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 #newsArticle {
@@ -34,16 +34,12 @@ position: relative;
   animation: pulse 2s infinite;
 }
 
-
 #skills {
   margin: 50px auto;
-
 }
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-
 }
 .skills {
   width: 100px;
@@ -54,8 +50,8 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 .icon {
   font-size: 50px;

@@ -12,15 +12,15 @@
 }
 #mobile .navBar {
   position: fixed;
-  background-color: rgb(19, 19, 19);
+  background-color: var(--dark-navbar);
   height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   z-index: 9999;
 }
-#mobile .navBar h1 {
-  color: #fff;
+#mobile .navBar #logo a {
+  color: var(--dark-menu);
   margin: auto;
   margin-left: 50px;
 }
@@ -35,11 +35,14 @@
   border: none;
   font-size: 25px;
   font-weight: bold;
-  color: #fff;
+  color: var(--dark-menu);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mobile #menuBtn {
-  color: #fff;
+  color: var(--dark-menu);
 }
 
 #mobile .menuNav {
@@ -47,7 +50,7 @@
   list-style: none;
   position: fixed;
   top: 0;
-  background: rgb(19, 19, 19);
+  background-color: var(--dark-navbar);
   left: 0;
   bottom: 0;
   width: 0;
@@ -69,7 +72,7 @@
 #mobile p {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: var(--dark-menu);
   text-transform: uppercase;
   font-weight: bold;
   margin: 0px;
@@ -81,27 +84,27 @@
 }
 
 .light-mode #mobile .navBar {
-  background-color: rgb(212, 212, 212);
+  background-color: var(--light-navbar);
 }
 
-.light-mode #mobile .navBar h1 {
-  color: #000;
+.light-mode #mobile .navBar #logo a {
+  color: var(--light-menu);
 }
 .light-mode #mobile .navBar button {
-  color: #000;
+  color: var(--light-menu);
 }
 
 .light-mode #mobile #menuBtn {
-  color: #000;
+  color: var(--light-menu);
 }
 
 .light-mode #mobile .menuNav {
-  background: rgb(212, 212, 212);
+  background-color: var(--light-navbar);
 }
 
 .light-mode #mobile a,
 .light-mode #mobile p {
-  color: #000;
+  color: var(--light-menu);
 }
 
 @media only screen and (min-width: 768px) {
@@ -111,14 +114,14 @@
   #desktop {
     display: grid;
     grid-template-columns: 25% 75%;
-    background-color: #000;
+    background-color: var(--dark-navbar);
   }
   #logo {
     grid-column: 1;
     margin: auto;
   }
   #logo h2 {
-    color: #fff;
+    color: var(--dark-menu);
   }
 
   #links {
@@ -129,23 +132,23 @@
     align-items: center;
   }
   #links p {
-    color: #fff;
+    color: var(--dark-menu);
     text-decoration: none;
     margin: 0px;
     font-size: 20px;
     cursor: pointer;
   }
   #links a {
-    color: #fff;
+    color: var(--dark-menu);
   }
 
   .light-mode #desktop {
-    background-color: rgb(212, 212, 212);
+    background-color: var(--light-navbar);
   }
-  .light-mode #logo h1 {
-    color: #000;
+  .light-mode #logo h2 {
+    color: var(--light-menu);
   }
   .light-mode #links a {
-    color: #000;
+    color: var(--light-menu);
   }
 }

@@ -46,8 +46,6 @@ export const Projects = () => {
         Projects <span className={isHidden ? "rotate" : "unrotate"}>▼</span>
       </h2>
       <div className={`fade-out ${isHidden ? "hidden" : "show"}`}>
-        {/* <p>Please look at some of my work</p> */}
-
         <Carousel>
           <div className="projects-grid">
             <div className={`work card ${expand[3] ? "expand" : ""}`}>

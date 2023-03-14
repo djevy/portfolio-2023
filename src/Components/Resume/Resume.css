@@ -1,11 +1,8 @@
-
 #CVDownload {
   margin: auto;
-  background-color: white;
   width: 200px;
   height: 40px;
   border-radius: 10px;
-  border: solid white;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -14,10 +11,14 @@
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
-  color: #000;
+  background-color: var(--dark-active);
+  color: var(--dark-text);
+  border: solid var(--dark-active);
 }
 .light-mode #CVDownload {
-  border: solid #000;
+  background-color: var(--light-active);
+  border: solid var(--light-active);
+  color: var(--light-text);
 }
 
 #CVDownload:hover {
@@ -32,4 +33,143 @@
 .experience h3,
 .experience h4 {
   text-align: center;
+}
+
+#resume #resumeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#resume #resumeContainer #experienceTitles {
+  width: calc(100% + 50px);
+  padding-left: 25px;
+  margin-left: -25px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+}
+#resume #resumeContainer #experienceTitles .groupedExperiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#resume #resumeContainer #experienceTitles h2 {
+  font-size: 1em;
+  padding: 2px;
+  cursor: text;
+  margin-left: 10px;
+}
+#resume #resumeContainer #experienceTitles h3,
+h4 {
+  font-size: 1em;
+  padding: 2px 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+#resume #resumeContainer #experienceTitles h3 {
+  border-bottom: solid 3px var(--dark-text);
+}
+#resume #resumeContainer #experienceTitles h3.active {
+  background-color: rgb(125, 125, 125);
+  color: var(--dark-active);
+  border-bottom: solid 3px var(--dark-active);
+}
+#resume #resumeContainer #experienceTitles h3:hover {
+  background-color: rgb(172, 172, 172);
+  color: var(--dark-active);
+  border-bottom: solid 3px var(--dark-active);
+}
+.light-mode #resume #resumeContainer #experienceTitles h3 {
+  border-bottom: solid 3px var(--light-text);
+}
+.light-mode #resume #resumeContainer #experienceTitles h3.active {
+  background-color: rgb(125, 125, 125);
+  color: var(--light-active);
+  border-bottom: solid 3px var(--light-active);
+}
+.light-mode #resume #resumeContainer #experienceTitles h3:hover {
+  background-color: rgb(172, 172, 172);
+  color: var(--light-active);
+  border-bottom: solid 3px var(--light-active);
+}
+#resume #resumeContainer #experiences {
+  height: 450px;
+  overflow-y: auto;
+}
+
+#resume #resumeContainer #experiences h3 {
+  color: var(--dark-menu);
+  font-size: 1.2em;
+}
+.light-mode #resume #resumeContainer #experiences h3 {
+  color: var(--light-menu);
+  font-size: 1.2em;
+}
+#resume #resumeContainer #experiences h4 {
+  cursor: text;
+}
+
+#resume #resumeContainer #experiences .hide {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #resume #resumeContainer {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+
+  #resume #resumeContainer #experienceTitles {
+    width: fit-content;
+    padding-left: 0px;
+    margin-left: 0px;
+    display: block;
+    overflow-x: hidden;
+  }
+  #resume #resumeContainer #experienceTitles .groupedExperiences {
+    display: block;
+  }
+  #resume #resumeContainer #experienceTitles h2 {
+    display: block;
+  }
+
+  #resume #resumeContainer #experienceTitles h3,
+  h4 {
+    padding: 3px;
+    display: block;
+  }
+
+  #resume #resumeContainer #experienceTitles h3 {
+    border-left: solid 3px var(--dark-text);
+    border-bottom: none;
+  }
+  #resume #resumeContainer #experienceTitles h3.active {
+    background-color: rgb(125, 125, 125);
+    color: var(--dark-active);
+    border-left: solid 3px var(--dark-active);
+    border-bottom: none;
+  }
+  #resume #resumeContainer #experienceTitles h3:hover {
+    background-color: rgb(172, 172, 172);
+    color: var(--dark-active);
+    border-left: solid 3px var(--dark-active);
+    border-bottom: none;
+  }
+  .light-mode #resume #resumeContainer #experienceTitles h3 {
+    border-left: solid 3px var(--light-text);
+    border-bottom: none;
+  }
+  .light-mode #resume #resumeContainer #experienceTitles h3.active {
+    background-color: rgb(125, 125, 125);
+    color: var(--light-active);
+    border-left: solid 3px var(--light-active);
+    border-bottom: none;
+  }
+  .light-mode #resume #resumeContainer #experienceTitles h3:hover {
+    background-color: rgb(172, 172, 172);
+    color: var(--light-active);
+    border-left: solid 3px var(--light-active);
+    border-bottom: none;
+  }
 }

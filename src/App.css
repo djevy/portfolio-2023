@@ -1,3 +1,25 @@
+:root {
+
+  /* Dark mode */
+  --dark-background: #020202;
+  --dark-navbar: #0D2818;
+  --dark-menu: #16DB65;
+  --dark-header: #058C42;
+  --dark-active: #04471C;
+  --dark-text: #fff;
+
+  /* Light mode */
+  --light-background: #FBFCFF;
+  --light-navbar: #D0CCD0;
+  --light-menu: #2c4a63;
+  --light-active: #1C6E8C;
+  --light-header: #165edb;
+  --light-text: #000;
+
+  }
+
+
+
 html,
 body {
   padding: 0;

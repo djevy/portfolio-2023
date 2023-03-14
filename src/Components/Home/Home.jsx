@@ -21,8 +21,8 @@ export const Home = () => {
     <section id="home">
       <div ref={ref} className={inView ? "show" : "hidden"}>
         <div id="welcome">
-          <h2>Hello there!</h2>
-          <h2>I'm Darren Evans</h2>
+          <p>Hello there, my name is</p>
+          <h2>Darren Evans</h2>
           <p>I am a self-taught Web Developer based in Kent, England.</p>
         </div>
         <div id="profileContainer">

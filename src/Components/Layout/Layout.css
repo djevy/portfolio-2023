@@ -1,33 +1,37 @@
-
-
 .App {
-  background: #000;
+  background: var(--dark-background);
 }
 .App .light-mode {
-  background: #fff;
+  background: var(--light-background);
 }
 #AppLayout {
-    color: #fff;
-    background-color: #000;
-    width: 90%;
-    margin: 10px auto;
-    max-width: 1024px;
+  color: var(--dark-text);
+  background: var(--dark-background);
+  width: 90%;
+  margin: 10px auto;
+  max-width: 1024px;
 }
 .light-mode #AppLayout {
-    color: #000;
-    background-color: #fff;
+  color: var(--light-text);
+  background: var(--light-background);
 }
 #AppLayout section {
-    margin: 40px auto;
-    padding-bottom: 10px;
+  margin: 40px auto;
+  padding-bottom: 10px;
 }
 
-#AppLayout section h2{
-    cursor: pointer;
+#AppLayout section h2 {
+  cursor: pointer;
+  color: var(--dark-header);
 }
+
+.light-mode  #AppLayout section h2 {
+    cursor: pointer;
+    color: var(--light-header);
+  }
 
 @media only screen and (min-width: 768px) {
-    #AppLayout {
-        width: 80%;
-    }
+  #AppLayout {
+    width: 80%;
   }
+}
