@@ -2,13 +2,14 @@
   border-radius: 100%;
   width: 200px;
   height: 200px;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   margin: auto;
+  position: relative;
 }
-.light-mode #profileContainer {
+/* .light-mode #profileContainer {
   border: #000 solid 3px;
-}
+} */
 
 #home a {
   color: #fff;
@@ -18,8 +19,20 @@
 }
 
 #home #profileContainer #profilePic {
-  width: 50%;
+  width: 100px;
   margin: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: moveUpDown 2s infinite ease alternate;
+}
+@keyframes moveUpDown {
+  to {
+    transform: translateY(10px)
+  }
 }
 
 #home div div:nth-child(1) {

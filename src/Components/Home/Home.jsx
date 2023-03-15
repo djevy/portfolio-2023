@@ -1,9 +1,12 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+
 import { HashLink } from "react-router-hash-link";
 import { useInView } from "react-intersection-observer";
 
-import ProfilePic from "../../Images/ProfilePic.png";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+
+import ProfilePic from "../../Images/Headshot.png";
 import "./Home.css";
 
 import { About } from "../About/About";
@@ -11,7 +14,10 @@ import { Projects } from "../Projects/Projects";
 import { Resume } from "../Resume/Resume";
 import { Contact } from "../Contact/Contact";
 
+import { DarkModeContext } from "../DarkMode/DarkModeProvider";
+
 export const Home = () => {
+  const { darkMode } = useContext(DarkModeContext);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
@@ -26,7 +32,21 @@ export const Home = () => {
           <p>I am a self-taught Web Developer based in Kent, England.</p>
         </div>
         <div id="profileContainer">
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3,1, 1]} />
+            <Sphere args={[1, 100, 200]} scale={2.8}>
+              <MeshDistortMaterial
+                color={darkMode ? "#2c4a63" : "#058C42" }
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
           <img src={ProfilePic} alt="A profile pic" id="profilePic" />
+
         </div>
 
         <div id="intro">
