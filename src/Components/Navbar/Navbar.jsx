@@ -31,7 +31,7 @@ export const Navbar = () => {
         <nav className="navBar">
           <div id="logo">
             <Link to="/" className="Link">
-              <h2>DE</h2>
+              <h2>DE - Web Developer</h2>
             </Link>
           </div>
           <button onClick={handleToggle}>
@@ -72,7 +72,7 @@ export const Navbar = () => {
             <HashLink
               smooth
               to="#contact"
-              className="Link"
+              className="Link contactLink"
               onClick={() => closeMenu()}
             >
               Contact
@@ -105,7 +105,7 @@ export const Navbar = () => {
           <HashLink smooth to="#resume" className="Link">
             Resume
           </HashLink>
-          <HashLink smooth to="#contact" className="Link">
+          <HashLink smooth to="#contact" className="Link contactLink">
             Contact
           </HashLink>
           <img

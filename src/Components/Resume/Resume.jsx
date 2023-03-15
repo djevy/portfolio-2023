@@ -195,14 +195,30 @@ export const Resume = () => {
               <h3>BA East Asian Studies @ The University of Sheffield</h3>
               <h4>2014 - 2018</h4>
               <ul>
-                <li></li>
+                <li>
+                  My East Asian Studies degree involved the study of the
+                  cultures, histories, societies, languages, and politics of
+                  East Asian countries, including China, Japan, and Korea. The
+                  degree covered a wide range of topics, such as literature,
+                  art, philosophy, religion, economics, and international
+                  relations.
+                </li>
+                <li>I also spent my entire degree studying the Japanese language, which included a year abroad in Tokyo where I completed a Japanese Language Programme, and taught English as a part-time job.</li>
               </ul>
             </div>
             <div className={`${show[4] ? "show" : "hide"}`}>
               <h3>Japanese Language Programme @ Sophia University, Tokyo</h3>
               <h4>2016 - 2017</h4>
               <ul>
-                <li></li>
+                <li>
+                  The Japanese Language Program aims to develop
+                  students' proficiency in the Japanese language, with a focus
+                  on speaking, listening, reading, and writing. Students
+                  learn Japanese grammar, vocabulary, and sentence structures
+                  through various activities, such as conversation practice,
+                  listening comprehension exercises, reading comprehension, and
+                  writing assignments.
+                </li>
               </ul>
             </div>
           </div>

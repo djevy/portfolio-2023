@@ -18,6 +18,10 @@
   display: flex;
   align-items: center;
   z-index: 9999;
+  font-family: 'Gotu', sans-serif;
+}
+#logo a {
+  font-family: 'Gotu', sans-serif;
 }
 #mobile .navBar #logo a {
   color: var(--dark-menu);
@@ -73,7 +77,7 @@
   display: block;
   text-decoration: none;
   color: var(--dark-menu);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: bold;
   margin: 0px;
   font-size: 1em;
@@ -130,6 +134,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: 'Gotu', sans-serif;
   }
   #links p {
     color: var(--dark-menu);

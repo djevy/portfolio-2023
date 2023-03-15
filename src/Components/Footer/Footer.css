@@ -8,6 +8,7 @@
   z-index: 2;
   background-color: var(--dark-navbar);
   color: var(--dark-menu);
+  font-family: 'Gotu', sans-serif;
 }
 .light-mode #footer {
   background-color: var(--light-navbar);
@@ -41,7 +42,7 @@
 
 @media only screen and (min-width: 768px) {
   #footer h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
   #footer h3 .mobileHide {
     display: inline;

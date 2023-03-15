@@ -7,7 +7,7 @@
   max-width: 450px;
   border: #000 solid 1px;
   border-radius: 10px;
-  height: 150px;
+  height: 160px;
   max-width: 200px;
   width: 95%;
   overflow: hidden;
@@ -22,8 +22,6 @@
 
 #projects .card:hover {
   box-shadow: 0 4px 5px 3px rgba(252, 252, 252, 0.692) !important;
-  /* height: 100%;
-  max-width: 300px; */
 }
 #projects .expand {
   height: 370px;
@@ -71,8 +69,6 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  /* max-height: 120px;
-  min-height: 100px; */
   color: #000;
 }
 #projects .card a img {
@@ -85,7 +81,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 0px;
-  /* margin-top: 10px; */
 }
 #projects .card .project-description.hideDescription{
   padding: 50px 0px;
@@ -109,28 +104,13 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
-  /* #projects .card:hover {
-    height: 100%;
-    max-width: 400px;
-  } */
   #projects .expand {
     max-width: 400px;
   }
-  #projects .card .project-description {
-    /* margin-top: 20px; */
-  }
-  /* #Gazetteer {
-    grid-column: 1;
-  }
-  #CompanyDirectory {
-    grid-column: 2;
-  } */
+
 }
 @media only screen and (max-width: 426px) {
-  /* #projects .card:hover {
-    height: 100%;
-    max-width: 300px;
-  } */
+
   #projects .expand {
     height: fit-content;
     max-width: 300px;
@@ -139,9 +119,7 @@
     height: 150px;
     max-width: 100%;
   }
-  #projects .card .project-description {
-    /* margin-top: 20px; */
-  }
+
 }
 
 @-webkit-keyframes pulse {

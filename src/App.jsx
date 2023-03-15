@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+
+import { PageLoader } from "./Components/PageLoader/PageLoader";
 import { BannerTop } from "./Components/BannerTop/BannerTop";
 import "./App.css";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -9,19 +12,35 @@ import { Routes, Route } from "react-router-dom";
 import { DarkModeProvider } from "./Components/DarkMode/DarkModeProvider";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <div className="App">
       <ParallaxProvider>
         <DarkModeProvider>
-          <Navbar />
-          <BannerTop />
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              {/* <Route path="/contact" element={<Contact />}/> */}
-            </Routes>
-          </Layout>
-          <Footer />
+          {loading ? (
+            <PageLoader loading={loading}/>
+          ) : (
+            <>
+              <Navbar />
+              <BannerTop />
+              <Layout>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                </Routes>
+              </Layout>
+              <Footer />
+            </>
+          )}
         </DarkModeProvider>
       </ParallaxProvider>
     </div>

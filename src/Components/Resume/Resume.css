@@ -71,7 +71,7 @@ h4 {
   border-bottom: solid 3px var(--dark-text);
 }
 #resume #resumeContainer #experienceTitles h3.active {
-  background-color: rgb(125, 125, 125);
+  background-color: rgb(218, 218, 218);
   color: var(--dark-active);
   border-bottom: solid 3px var(--dark-active);
 }
@@ -84,7 +84,7 @@ h4 {
   border-bottom: solid 3px var(--light-text);
 }
 .light-mode #resume #resumeContainer #experienceTitles h3.active {
-  background-color: rgb(125, 125, 125);
+  background-color: rgb(218, 218, 218);
   color: var(--light-active);
   border-bottom: solid 3px var(--light-active);
 }
@@ -117,7 +117,7 @@ h4 {
 @media only screen and (min-width: 768px) {
   #resume #resumeContainer {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
   }
 
   #resume #resumeContainer #experienceTitles {
@@ -145,13 +145,11 @@ h4 {
     border-bottom: none;
   }
   #resume #resumeContainer #experienceTitles h3.active {
-    background-color: rgb(125, 125, 125);
     color: var(--dark-active);
     border-left: solid 3px var(--dark-active);
     border-bottom: none;
   }
   #resume #resumeContainer #experienceTitles h3:hover {
-    background-color: rgb(172, 172, 172);
     color: var(--dark-active);
     border-left: solid 3px var(--dark-active);
     border-bottom: none;
@@ -161,13 +159,11 @@ h4 {
     border-bottom: none;
   }
   .light-mode #resume #resumeContainer #experienceTitles h3.active {
-    background-color: rgb(125, 125, 125);
     color: var(--light-active);
     border-left: solid 3px var(--light-active);
     border-bottom: none;
   }
   .light-mode #resume #resumeContainer #experienceTitles h3:hover {
-    background-color: rgb(172, 172, 172);
     color: var(--light-active);
     border-left: solid 3px var(--light-active);
     border-bottom: none;

@@ -1,7 +1,8 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Poppins&display=swap');
 
+:root {
   /* Dark mode */
-  --dark-background: #020202;
+  --dark-background: #1a1a1a;
   --dark-navbar: #0D2818;
   --dark-menu: #16DB65;
   --dark-header: #058C42;
@@ -15,7 +16,6 @@
   --light-active: #1C6E8C;
   --light-header: #165edb;
   --light-text: #000;
-
   }
 
 
@@ -24,11 +24,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 200vh;
+  height: 100vh;
   /* background: #000; */
+  font-family: 'Poppins', sans-serif
 }
 
-a {
+a, li {
   text-decoration: none;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
@@ -36,6 +37,9 @@ a {
 a:hover {
   font-weight: bold;
   transform: scale(1.1, 1.1);
+}
+ul{
+  padding-inline-start: 20px;
 }
 
 .hidden {

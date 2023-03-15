@@ -57,11 +57,6 @@ export const About = () => {
             a team environment. After all, two heads are better than one!
           </p>
           <p className="showContent">
-            Working closely with clients is my top priority as to ensure each
-            and every need is met, so I can create them the website of their
-            dreams.
-          </p>
-          <p className="showContent">
             I am always looking for an exciting new project to work on... so why
             wait? I look forward to working with you!
           </p>
