@@ -36,9 +36,17 @@ export const Navbar = () => {
           </div>
           <button onClick={handleToggle}>
             {navbarOpen ? (
-              <img id="closeBtn" src={darkMode ? Cross : CrossWhite} alt="Close menu" />
+              <img
+                id="closeBtn"
+                src={darkMode ? Cross : CrossWhite}
+                alt="Close menu"
+              />
             ) : (
-              <img id="menuBtn" src={darkMode ? Hamburger : HamburgerWhite} alt="Open menu" />
+              <img
+                id="menuBtn"
+                src={darkMode ? Hamburger : HamburgerWhite}
+                alt="Open menu"
+              />
             )}
           </button>
           <div className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
@@ -55,19 +63,19 @@ export const Navbar = () => {
             </HashLink>
             <HashLink
               smooth
-              to="#projects"
-              className="Link"
-              onClick={() => closeMenu()}
-            >
-              Projects
-            </HashLink>
-            <HashLink
-              smooth
               to="#resume"
               className="Link"
               onClick={() => closeMenu()}
             >
               Resume
+            </HashLink>
+            <HashLink
+              smooth
+              to="#projects"
+              className="Link"
+              onClick={() => closeMenu()}
+            >
+              Projects
             </HashLink>
             <HashLink
               smooth
@@ -78,11 +86,11 @@ export const Navbar = () => {
               Contact
             </HashLink>
             <img
-            className="DarkToggle"
-            src={darkMode ? LightIcon : DarkIcon}
-            alt="Dark mode toggle"
-            onClick={handleDarkToggle}
-          />
+              className="DarkToggle"
+              src={darkMode ? LightIcon : DarkIcon}
+              alt="Dark mode toggle"
+              onClick={handleDarkToggle}
+            />
           </div>
         </nav>
       </div>
@@ -99,11 +107,11 @@ export const Navbar = () => {
           <HashLink smooth to="#about" className="Link">
             About
           </HashLink>
-          <HashLink smooth to="#projects" className="Link">
-            Projects
-          </HashLink>
           <HashLink smooth to="#resume" className="Link">
             Resume
+          </HashLink>
+          <HashLink smooth to="#projects" className="Link">
+            Projects
           </HashLink>
           <HashLink smooth to="#contact" className="Link contactLink">
             Contact

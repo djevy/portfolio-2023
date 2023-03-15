@@ -69,8 +69,9 @@ export const Home = () => {
         </div>
       </div>
       <About />
-      <Projects />
       <Resume />
+      <Projects />
+
       <Contact />
     </section>
   );
