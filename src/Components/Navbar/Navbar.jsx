@@ -31,7 +31,7 @@ export const Navbar = () => {
         <nav className="navBar">
           <div id="logo">
             <Link to="/" className="Link">
-              <h2>DE - Web Developer</h2>
+              <h2>DE - Web Dev</h2>
             </Link>
           </div>
           <button onClick={handleToggle}>
