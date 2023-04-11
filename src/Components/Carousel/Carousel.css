@@ -21,6 +21,7 @@
   
   .carousel-dots {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: absolute;
     bottom: 0;
@@ -31,7 +32,7 @@
   .dot {
     width: 15px;
     height: 15px;
-    margin: 0 5px;
+    margin: 0 5px 5px;
     border-radius: 50%;
     background-color: #bbb;
     cursor: pointer;
@@ -74,10 +75,12 @@
   
   .carousel-prev {
     left: 0px;
+    opacity: 0.8;
   }
   
   .carousel-next {
     right: 0px;
+    opacity: 0.8;
   }
   
   @media (min-width: 768px) {
@@ -88,6 +91,15 @@
       bottom: 0;
       left: 0;
       right: 0;
+    }
+    .carousel-prev {
+      left: 0px;
+      opacity: 1;
+    }
+    
+    .carousel-next {
+      right: 0px;
+      opacity: 1;
     }
 
   }

@@ -1,13 +1,13 @@
 #projects .card {
   position: relative;
-  margin:25px;
+  margin: 0px auto 20px;
   padding: 5px;
   background-color: #fff;
   color: #000;
   max-width: 450px;
   border: #000 solid 1px;
   border-radius: 10px;
-  height: 160px;
+  /* height: 160px; */
   max-width: 200px;
   width: 95%;
   overflow: hidden;
@@ -23,15 +23,26 @@
 #projects .card:hover {
   box-shadow: 0 4px 5px 3px rgba(252, 252, 252, 0.692) !important;
 }
-#projects .expand {
+/* #projects .expand {
   height: 370px;
   max-height: 420px;
   max-width: 300px;
-}
+} */
 #projects .work.card.expand a img{
   height: 200px;
   max-width: 100%;
   
+}
+
+#projects .skill {
+  display: inline-block;
+  margin: 0 5px;
+  border: var(--dark-header)  solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+.light-mode #projects .skill {
+  border: var(--light-header) solid;
 }
 
 #projects .expandContents {
@@ -95,7 +106,12 @@
 }
 
 #projects .card .project-description .articleLink {
-  color: blue;
+  color: var(--dark-menu);
+  text-decoration: underline;
+}
+
+.light-mode #projects .card .project-description .articleLink {
+  color: var(--light-menu);
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
