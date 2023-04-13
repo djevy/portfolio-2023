@@ -1,10 +1,10 @@
-import React, { useContext, CSSProperties } from "react";
+import React, { useContext } from "react";
 import "./PageLoader.css";
 import { RingLoader } from "react-spinners";
 import { DarkModeContext } from "../DarkMode/DarkModeProvider";
 
 
-const override: CSSProperties = {
+const override = {
   display: "block",
   margin: "0 auto",
   borderColor: "red",

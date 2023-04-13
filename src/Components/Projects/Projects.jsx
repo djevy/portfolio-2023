@@ -21,6 +21,7 @@ import newYearsResolutions from "../../Images/mywork/NewYearsResolutions.png";
 import pensionAgeCalculator from "../../Images/mywork/PensionAgeCalculator.png";
 import pickYourSquad from "../../Images/mywork/PickYourSquad.png";
 import takeAway from "../../Images/mywork/TakeAway.png";
+import FMLogo from "../../Images/FM_Logo.png";
 
 export const Projects = () => {
   const { ref, inView } = useInView({
@@ -34,6 +35,14 @@ export const Projects = () => {
   };
 
   const projects = [
+    {
+      link: "https://film-match.darrenrevans.co.uk/",
+      image: FMLogo,
+      title: "Film Match",
+      "project description":
+        "A film and tv show matching app that will settle the what should we watch debate. This is a personal project that was created out of necessity after many conversations with friends and family when it came time to pick something to watch together.",
+      skills: ["React", "Node", "HTML-5", "CSS3", "JavaScript"],
+    },
     {
       link: "https://trinitymirrordataunit.com/preview/preview_cost_of_living.html",
       image: costOfLiving,
@@ -51,7 +60,7 @@ export const Projects = () => {
       title: "Pension Age Calculator",
       "project description":
         "A pension age calculator widget used to show the date at which you are able to claim your state pension, as well as showing your the remaining time until retirement.",
-        skills: ["HTML-5", "CSS3", "JavaScript"],
+      skills: ["HTML-5", "CSS3", "JavaScript"],
     },
     {
       link: "https://reachdata.live/preview/code_pension_calculator.html",
@@ -156,7 +165,7 @@ export const Projects = () => {
       title: "Crime Mapper",
       "project description":
         "Crime mapper is a leaflet based map utilising a police api, created to show crime rates in towns and cities across the UK given a crime type and location.",
-      skills: ["HTML-5", "CSS3", "JavaScript","Leaflet.js",],
+      skills: ["HTML-5", "CSS3", "JavaScript", "Leaflet.js"],
     },
     {
       link: "https://gazetteer.darrenrevans.co.uk/",
@@ -164,7 +173,7 @@ export const Projects = () => {
       title: "Gazetteer",
       "project description":
         "Gazetteer is a mobile first app that provides live country information, weather and exchange rates.",
-      skills: ["HTML-5", "CSS3", "JavaScript","Leaflet.js",],
+      skills: ["HTML-5", "CSS3", "JavaScript", "Leaflet.js"],
     },
     {
       link: "https://companydirectory.darrenrevans.co.uk/",
@@ -172,7 +181,7 @@ export const Projects = () => {
       title: "Company Directory",
       "project description":
         "Company directory is a database interface with CRUD operations. It is a desktop website that can also run on a mobile, allowing the maintenance of a company personnel database to see who’s who, which department they are in and where they are located.",
-      skills: ["HTML-5", "CSS3", "JavaScript","PHP", "SQL"],
+      skills: ["HTML-5", "CSS3", "JavaScript", "PHP", "SQL"],
     },
   ];
 
