@@ -26,7 +26,7 @@ export const About = () => {
             <img src={InJapan} alt="Me in Japan" loading="lazy" />
           </div>
           <p className="showContent">
-            After spending two immersive years in Japan, where I immersed myself
+            After spending two years in Japan, where I immersed myself
             in the language and culture while working as an English teacher, I
             have discovered a new passion that unites people across borders: the
             universal language of code. Now, I am channeling my enthusiasm for
