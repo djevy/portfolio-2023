@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { HashLink } from "react-router-hash-link";
 import { useInView } from "react-intersection-observer";
@@ -9,12 +10,12 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import ProfilePic from "../../Images/Headshot.png";
 import "./Home.css";
 
-import { About } from "../About/About";
 import { Projects } from "../Projects/Projects";
 import { Resume } from "../Resume/Resume";
 import { Contact } from "../Contact/Contact";
 
 import { DarkModeContext } from "../DarkMode/DarkModeProvider";
+import Skills from "../Skills/Skills";
 
 export const Home = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -55,21 +56,24 @@ export const Home = () => {
             I have a passion for building my knowledge in modern JavaScript as
             well as Frameworks that use it like React.js.
           </p>
+          <p>Read more <Link to="/about-me" className="link">about me</Link></p>
+
           <p>
             Please take a look around my site, at my {""}
-            <HashLink smooth to="#about">
+            <HashLink smooth to="#skills" className="link">
               skills {""}
             </HashLink>
             and {""}
-            <HashLink smooth to="#projects">
+            <HashLink smooth to="#projects" className="link">
               projects
             </HashLink>
             .
           </p>
         </div>
       </div>
-      <About />
+      
       <Resume />
+      <Skills/>
       <Projects />
 
       <Contact />

@@ -11,11 +11,8 @@
   border: #000 solid 3px;
 } */
 
-#home a {
-  color: #fff;
-}
-.light-mode #home a {
-  color: #000;
+#home {
+  margin-bottom: 0px !important;
 }
 
 #home #profileContainer #profilePic {

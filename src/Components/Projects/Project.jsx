@@ -1,4 +1,4 @@
-import React from "react";
+import GithubIcon from "../../Images/github-icon.png";
 
 const Project = ({ project }) => {
   return (
@@ -17,9 +17,21 @@ const Project = ({ project }) => {
         >
           {project["link text"]}
         </a>
-        <div>
+        <div className="links-out">
+          <a target="_blank" rel="noreferrer" href={project.link}>
+            <button className="visit-button">Visit</button>
+          </a>
+          {project.github && (
+            <a target="_blank" rel="noreferrer" href={project.github}>
+              <img src={GithubIcon} alt="Github logo" className="github-icon" />
+            </a>
+          )}
+        </div>
+        <div className="project-skills">
           {project["skills"].map((skill, index) => (
-            <p key={index} className="skill">{skill}</p>
+            <p key={index} className="project-skill">
+              {skill}
+            </p>
           ))}
         </div>
       </div>

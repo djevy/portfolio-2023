@@ -1,14 +1,24 @@
-#footer {
-  /* position: fixed; */
+#footer-layout {
   bottom: 0px;
   width: 100%;
-  max-width: 100vw;
+  z-index: 2;
+  background-color: var(--dark-navbar);
+}
+
+.light-mode #footer-layout {
+  background-color: var(--light-navbar);
+}
+#footer {
+  bottom: 0px;
+  width: 100%;
+  max-width: 1500px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 2;
   background-color: var(--dark-navbar);
   color: var(--dark-menu);
   font-family: 'Gotu', sans-serif;
+  margin: auto;
 }
 .light-mode #footer {
   background-color: var(--light-navbar);

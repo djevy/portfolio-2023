@@ -1,20 +1,23 @@
 #contactForm {
   display: grid;
+  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 1fr;
+  max-width: 600px;
+  margin: auto;
+
 }
-#contactForm div {
+#contactForm .form-layout div {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 10px;
 }
-#contactForm div label {
-  width: 120px;
-  font-weight: bold;
-  font-size: 1.25em;
+#contactForm .form-control {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  font-family: 'Poppins', sans-serif
 }
-#contactForm label.mobileHide {
-  display: none;
-}
+
 #contactForm div textarea {
   min-height: 150px;
 }
@@ -56,8 +59,7 @@
   font-weight: bold;
   transform: scale(1.1, 1.1);
 }
-
-#contactForm #thankYou {
+#thankYou p{
   margin-top: 30px;
   font-size: 1.25em;
   font-weight: bold;
@@ -73,7 +75,7 @@
   #contactForm div input,
   #contactForm div textarea {
     min-width: 200px;
-    width: 50%;
+    width: 80%;
     font-size: 1.25em;
   }
 }

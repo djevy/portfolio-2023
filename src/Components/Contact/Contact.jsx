@@ -54,72 +54,61 @@ export const Contact = () => {
           enquiries.
         </p>
         <form ref={form} id="contactForm" onSubmit={sendEmail}>
-          <div>
-            <label className="mobileHide" htmlFor="firstname">
-              First Name:
-            </label>
+          <div className="form-layout">
+            <div>
+              <input
+                type="text"
+                className="form-control"
+                id="fname"
+                name="firstname"
+                placeholder="Your first name.."
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                className="form-control"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                className="form-control"
+                id="email"
+                name="email"
+                placeholder="example@email.co.uk"
+                required
+              />
+            </div>
+
+            <div>
+              <textarea
+                id="message"
+                className="form-control"
+                name="message"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+            </div>
             <input
-              type="text"
-              className="form-control"
-              id="fname"
-              name="firstname"
-              placeholder="Your first name.."
-              required
+              type="submit"
+              id="submitBtn"
+              className="btn btn-primary"
+              disabled={confirmLoading}
+              value="Submit"
             />
-          </div>
-
-          <div>
-            <label className="mobileHide" htmlFor="lastname">
-              Last Name:
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
-              required
-            />
-          </div>
-
-          <div>
-            <label className="mobileHide" htmlFor="email">
-              Email:
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="email"
-              name="email"
-              placeholder="example@email.co.uk"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="mobileHide" htmlFor="message">
-              Message:{" "}
-            </label>
-            <textarea
-              id="message"
-              className="form-control"
-              name="message"
-              placeholder="Write your message..."
-              required
-            ></textarea>
-          </div>
-          <input
-            type="submit"
-            id="submitBtn"
-            className="btn btn-primary"
-            disabled={confirmLoading}
-            value="Submit"
-          />
-
-          <div id="thankYou">
-            {sent && <div>Thank you for contacting me!</div>}
           </div>
         </form>
+        <div id="thankYou">
+          {sent && <p>Thank you for contacting me!</p>}
+        </div>
       </div>
     </section>
   );

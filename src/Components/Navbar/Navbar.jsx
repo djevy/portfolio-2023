@@ -10,6 +10,7 @@ import Cross from "../../Images/cross-menu.png";
 import CrossWhite from "../../Images/cross-menu-white.png";
 import DarkIcon from "../../Images/dark-mode-toggle-icon.png";
 import LightIcon from "../../Images/light-mode-toggle-icon.png";
+import { scrollToTop } from "../../utils/ScrollToTop";
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -30,7 +31,7 @@ export const Navbar = () => {
       <div id="mobile">
         <nav className="navBar">
           <div id="logo">
-            <Link to="/" className="Link">
+            <Link to="/">
               <h2>DE - Web Dev</h2>
             </Link>
           </div>
@@ -50,36 +51,21 @@ export const Navbar = () => {
             )}
           </button>
           <div className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-            <HashLink smooth to="/" onClick={() => closeMenu()}>
+            <Link to="/" onClick={() => closeMenu()}>
               Home
-            </HashLink>
-            <HashLink
-              smooth
-              to="#about"
-              className="Link"
-              onClick={() => closeMenu()}
-            >
+            </Link>
+            <Link to="/about-me" onClick={() => closeMenu()}>
               About
-            </HashLink>
-            <HashLink
-              smooth
-              to="#resume"
-              className="Link"
-              onClick={() => closeMenu()}
-            >
+            </Link>
+            <HashLink smooth to="/#resume" onClick={() => closeMenu()}>
               Resume
             </HashLink>
-            <HashLink
-              smooth
-              to="#projects"
-              className="Link"
-              onClick={() => closeMenu()}
-            >
+            <HashLink smooth to="/#projects" onClick={() => closeMenu()}>
               Projects
             </HashLink>
             <HashLink
               smooth
-              to="#contact"
+              to="/#contact"
               className="Link contactLink"
               onClick={() => closeMenu()}
             >
@@ -95,34 +81,36 @@ export const Navbar = () => {
         </nav>
       </div>
       <div id="desktop">
-        <div id="logo">
-          <Link to="/" className="Link">
-            <h2>DE</h2>
-          </Link>
-        </div>
-        <div id="links">
-          <HashLink smooth to="#" className="Link">
-            Home
-          </HashLink>
-          <HashLink smooth to="#about" className="Link">
-            About
-          </HashLink>
-          <HashLink smooth to="#resume" className="Link">
-            Resume
-          </HashLink>
-          <HashLink smooth to="#projects" className="Link">
-            Projects
-          </HashLink>
-          <HashLink smooth to="#contact" className="Link contactLink">
-            Contact
-          </HashLink>
-          <img
-            className="DarkToggle"
-            src={darkMode ? LightIcon : DarkIcon}
-            alt="Dark mode toggle"
-            onClick={handleDarkToggle}
-          />
-        </div>
+        <nav className="navBar">
+          <div id="logo">
+            <Link to="/" onClick={scrollToTop}>
+              <h2>DE</h2>
+            </Link>
+          </div>
+          <div id="links">
+            <Link to="/" onClick={scrollToTop}>
+              Home
+            </Link>
+            <Link to="/about-me" onClick={scrollToTop}>
+              About
+            </Link>
+            <HashLink smooth to="/#resume">
+              Resume
+            </HashLink>
+            <HashLink smooth to="/#projects">
+              Projects
+            </HashLink>
+            <HashLink smooth to="/#contact" className="contactLink">
+              Contact
+            </HashLink>
+            <img
+              className="DarkToggle"
+              src={darkMode ? LightIcon : DarkIcon}
+              alt="Dark mode toggle"
+              onClick={handleDarkToggle}
+            />
+          </div>
+        </nav>
       </div>
     </section>
   );

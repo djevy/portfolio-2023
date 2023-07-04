@@ -28,7 +28,13 @@ body {
   /* background: #000; */
   font-family: 'Poppins', sans-serif
 }
+.light-mode .link {
+  color: var(--light-header);
+}
 
+.link {
+  color: var(--dark-header);
+}
 a, li {
   text-decoration: none;
   transform: scale(1, 1);

@@ -1,3 +1,10 @@
+#navbar {
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: var(--dark-navbar);
+  width: 100%; */
+  /* position: relative; */
+}
 #desktop {
   display: none;
 }
@@ -116,10 +123,35 @@
   #mobile {
     display: none;
   }
+  .light-mode #desktop {
+    background-color: var(--light-navbar);
+  }
+  .light-mode #desktop .navBar {
+    background-color: var(--light-navbar);
+  }
   #desktop {
+    position: relative;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    background-color: var(--dark-navbar);
+    z-index: 9999;
+    width: 100%;
+    margin: auto;
+  }
+  #desktop .navBar{
+    height: 50px;
+    width: 100%;
     display: grid;
+    align-content: center;
     grid-template-columns: 25% 75%;
     background-color: var(--dark-navbar);
+    z-index: 9999;
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
   }
   #logo {
     grid-column: 1;
